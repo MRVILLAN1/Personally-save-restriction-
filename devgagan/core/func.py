@@ -36,7 +36,7 @@ async def subscribe(app, message):
       try:
          user = await app.get_chat_member(update_channel, message.from_user.id)
          if user.status == "kicked":
-            await message.reply_text("You are Banned. Contact -- @saverestriction4")
+            await message.reply_text("You are Banned. Contact -- @Personally_save_bot)
             return 1
       except UserNotParticipant:
          await message.reply_photo(photo="https://i.ibb.co/FBqXzK6/2debf492cbcf64e37bf44604f9251abd.jpg",caption=script.FORCE_MSG.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"{url}")]]))
